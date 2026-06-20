@@ -10,21 +10,22 @@ import org.lwjgl.glfw.GLFW;
 
 import com.mojang.blaze3d.platform.InputConstants;
 
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 
 public class MusicPlayerKeys {
 	
-	public static final KeyMapping OPEN = new KeyMapping(KEY_OPEN, GLFW.GLFW_KEY_F8, KEY_CATEGORY);
-	// TODO check to add modifier key ALT back
-	public static final KeyMapping PAUSE = new KeyMapping(KEY_PAUSE, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_KP_8, KEY_CATEGORY);
-	public static final KeyMapping SKIP_FORWARD = new KeyMapping(KEY_SKIP_FORWARD, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_KP_9, KEY_CATEGORY);
-	public static final KeyMapping SKIP_BACK = new KeyMapping(KEY_SKIP_BACK, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_KP_7, KEY_CATEGORY);
+	public static final KeyMapping.Category CATEGORY = KeyMapping.Category.register(net.minecraft.resources.Identifier.fromNamespaceAndPath(info.u_team.music_player.MusicPlayerReference.MODID, "category"));
+	
+	public static final KeyMapping OPEN = new KeyMapping(KEY_OPEN, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_F8, CATEGORY);
+	public static final KeyMapping PAUSE = new KeyMapping(KEY_PAUSE, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_KP_8, CATEGORY);
+	public static final KeyMapping SKIP_FORWARD = new KeyMapping(KEY_SKIP_FORWARD, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_KP_9, CATEGORY);
+	public static final KeyMapping SKIP_BACK = new KeyMapping(KEY_SKIP_BACK, InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_KP_7, CATEGORY);
 	
 	public static void register() {
-		KeyBindingHelper.registerKeyBinding(OPEN);
-		KeyBindingHelper.registerKeyBinding(PAUSE);
-		KeyBindingHelper.registerKeyBinding(SKIP_FORWARD);
-		KeyBindingHelper.registerKeyBinding(SKIP_BACK);
+		KeyMappingHelper.registerKeyMapping(OPEN);
+		KeyMappingHelper.registerKeyMapping(PAUSE);
+		KeyMappingHelper.registerKeyMapping(SKIP_FORWARD);
+		KeyMappingHelper.registerKeyMapping(SKIP_BACK);
 	}
 }

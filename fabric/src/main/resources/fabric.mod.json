@@ -2,18 +2,19 @@
 	"schemaVersion": 1,
 	"id": "musicplayer",
 	"version": "${version}",
-	"name": "Music Player",
-	"description": "Join our discord server here: https://discord.hycrafthd.net\n\nPlay every youtube video, livestream and more with this player! We use lava player to ensure this diversity.\n\nLearn more about lavaplayer here: https://github.com/sedmelluq/lavaplayer\n\nSources:\n  - YouTube\n  - SoundCloud\n  - Bandcamp\n  - Vimeo\n  - Twitch streams\n  - Local files\n  - HTTP URLs\n\nFile formats:\n  - MP3\n  - FLAC\n  - WAV\n  - Matroska/WebM (AAC, Opus or Vorbis codecs)\n  - MP4/M4A (AAC codec)\n  - OGG streams (Opus, Vorbis and FLAC codecs)\n  - AAC streams\n  - Stream playlists (M3U and PLS)",
+	"name": "Music Player Extended",
+	"description": "Music Player Extended - Play YouTube, SoundCloud, Bandcamp, local files and more in-game! Extended fork with modern UI, responsive design, and enhanced features.",
 	"authors": [
-		"HyCraftHD"
+		"Naoticaa"
+	],
+	"contributors": [
+		"HyCraftHD (original Music Player)"
 	],
 	"contact": {
-		"homepage": "https://u-team.info/mods/musicplayer",
-		"sources": "https://github.com/MC-U-Team/Music-Player",
-		"issues": "https://github.com/MC-U-Team/Music-Player/issues"
+		"sources": "https://github.com/Naotica2/Music-Player-Extended.git"
 	},
-	"license": "Apache-2.0 License",
-	"icon": "logo.png",
+	"license": "Apache-2.0",
+	"icon": "assets/musicplayer/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"client": [
@@ -25,18 +26,20 @@
 		"musicplayer.mixins.json"
 	],
 	"depends": {
-		"uteamcore": ">=5.6.2.364",
-		"fabricloader": ">=0.16.9",
-		"fabric-api": ">=0.114.0+1.21.1",
-		"minecraft": "1.21.1",
-		"java": ">=17"
+		"fabricloader": ">=0.19.0",
+		"fabric-api": "*",
+		"minecraft": ">=26.1",
+		"java": ">=25",
+		"owo": ">=0.13.0",
+		"yet_another_config_lib_v3": ">=3.9.0"
+	},
+	"recommends": {
+		"modmenu": "*"
 	},
 	"custom": {
-		"uteamcore:update_url": "https://api.u-team.info/update/musicplayer_fabric.json",
 		"modmenu": {
-			"links": {
-				"modmenu.discord": "https://discord.hycrafthd.net"
-			}
+			"badges": [],
+			"update_checker": false
 		}
 	}
 }

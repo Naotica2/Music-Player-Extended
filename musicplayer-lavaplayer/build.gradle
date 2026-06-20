@@ -10,6 +10,8 @@ sourceSets {
 	test_player {
 		java
 		resources
+		compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+		runtimeClasspath += sourceSets.main.output + sourceSets.main.runtimeClasspath
 	}
 }
 
@@ -80,4 +82,14 @@ dependencies {
 	implementation "org.slf4j:slf4j-simple:2.0.17"
 	
 	implementation project(":musicplayer-lavaplayer-api")
+}
+
+tasks.register("testRun", JavaExec) {
+	classpath = sourceSets.test_player.runtimeClasspath
+	mainClass = "info.u_team.music_player.lavaplayer.testimpl.Main"
+}
+
+tasks.register("searchTest", JavaExec) {
+	classpath = sourceSets.test_player.runtimeClasspath
+	mainClass = "info.u_team.music_player.lavaplayer.testimpl.SearchTest"
 }

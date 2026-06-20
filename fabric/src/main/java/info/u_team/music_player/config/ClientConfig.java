@@ -12,6 +12,11 @@ import com.google.gson.GsonBuilder;
 import info.u_team.music_player.MusicPlayerMod;
 import net.fabricmc.loader.api.FabricLoader;
 
+/**
+ * Client-side configuration for Music Player.
+ * Currently uses GSON for persistence. Will be migrated to YACL
+ * for in-game configuration UI in a future update.
+ */
 public class ClientConfig {
 	
 	private static transient ClientConfig INSTANCE = new ClientConfig();

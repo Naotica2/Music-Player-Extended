@@ -1,41 +1,5 @@
 plugins {
-	id "fabric-loom" apply false
-	id "info.u_team.gradle_files"
-}
-
-group = "info.u-team"
-base.archivesName = gradlefiles.archivesName()
-version = gradlefiles.version()
-
-gradlefiles {
-	vendor = "Team UTeam"
-	orderModPublishTasks(gradlefiles.project("neoforge"), gradlefiles.project("forge"), gradlefiles.project("fabric"))
-}
-
-ext.commonPom = { pom ->
-	pom.description = "${config.github.name}"
-	pom.url = "https://github.com/MC-U-Team/${config.github.name}"
-	pom.scm {
-		url = "https://github.com/MC-U-Team/${config.github.name}"
-		connection = "scm:git:git://github.com/MC-U-Team/${config.github.name}.git"
-		developerConnection = "scm:git:git@github.com:MC-U-Team/${config.github.name}.git"
-	}
-	pom.issueManagement {
-		system = "github"
-		url = "https://github.com/MC-U-Team/${config.github.name}/issues"
-	}
-	pom.licenses {
-		license {
-			name = "Apache License 2.0"
-			url = "https://github.com/MC-U-Team/${config.github.name}/blob/${config.github.branch}/LICENSE"
-			distribution = "repo"
-		}
-	}
-	pom.developers {
-		developer {
-			name = "HyCraftHD"
-		}
-	}
+	id "net.fabricmc.fabric-loom" apply false
 }
 
 ext.lavaplayerLibraries = {

@@ -1,0 +1,107 @@
+
+> Configure project :fabric
+Fabric Loom: 1.16.3
+
+> Task :fabric:tasks
+
+------------------------------------------------------------
+Tasks runnable from project ':fabric'
+------------------------------------------------------------
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the classes of the 'main' feature.
+sourcesJar - Assembles a jar archive containing the main sources.
+testClasses - Assembles test classes.
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the 'main' feature.
+
+Fabric tasks
+------------
+configureClientLaunch - Setup the required files to launch the Minecraft client
+configureLaunch - Setup the required files to launch Minecraft
+downloadAssets - Downloads required game assets for Minecraft.
+downloadRenderDoc
+exportClasspath
+extractRenderDoc
+generateDLIConfig - Generate the DevLaunchInjector config file
+generateLog4jConfig - Generate the log4j config file
+genSources - Decompile minecraft using the default decompiler.
+genSourcesWithCfr - Decompile minecraft using Cfr.
+genSourcesWithVineflower - Decompile minecraft using Vineflower.
+processIncludeJars
+runClient - Starts the 'null' run configuration
+runClientRenderDoc
+runServer - Starts the 'null' run configuration
+startRenderDocUI
+
+Help tasks
+----------
+artifactTransforms - Displays the Artifact Transforms that can be executed in project ':fabric'.
+buildEnvironment - Displays all buildscript dependencies declared in project ':fabric'.
+dependencies - Displays all dependencies declared in project ':fabric'.
+dependencyInsight - Displays the insight into a specific dependency in project ':fabric'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+outgoingVariants - Displays the outgoing variants of project ':fabric'.
+projects - Displays the sub-projects of project ':fabric'.
+properties - Displays the properties of project ':fabric'.
+resolvableConfigurations - Displays the configurations that can be resolved in project ':fabric'.
+tasks - Displays the tasks runnable from project ':fabric'.
+
+IDE tasks
+---------
+cleanEclipse - Cleans all Eclipse files.
+eclipse - Generates all Eclipse files.
+genEclipseRuns - Generates Eclipse run configurations for this project.
+ideaSyncTask
+vscode - Generates VSCode launch configurations.
+
+Publishing tasks
+----------------
+generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+publish - Publishes all publications produced by this project.
+publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+
+Shadow tasks
+------------
+knows - Do you know who knows?
+shadowJar - Create a combined JAR of project and runtime dependencies
+
+Verification tasks
+------------------
+check - Runs all checks.
+test - Runs the test suite.
+validateAccessWidener - Validate all the rules in the access widener against the Minecraft jar
+
+Other tasks
+-----------
+cleanEclipseClasspath
+cleanEclipseJdt
+cleanEclipseProject
+compileJava - Compiles main Java source.
+compileTestJava - Compiles test Java source.
+eclipseClasspath - Generates the Eclipse classpath file.
+eclipseJdt - Generates the Eclipse JDT settings file.
+eclipseProject - Generates the Eclipse project file.
+processResources - Processes main resources.
+processTestResources - Processes test resources.
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+
+BUILD SUCCESSFUL in 2s
+1 actionable task: 1 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html

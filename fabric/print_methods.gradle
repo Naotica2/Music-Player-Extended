@@ -1,0 +1,12 @@
+task printOwoContext {
+    doLast {
+        def cp = project.configurations.compileClasspath.files.find { it.name.contains("owo-lib") }
+        if (cp) {
+            def cl = new URLClassLoader([cp.toURI().toURL()] as URL[], getClass().getClassLoader())
+            try {
+                def c = cl.loadClass("io.wispforest.owo.ui.core.OwoUIDrawContext")
+                c.methods.findAll { it.name.contains("draw") || it.name.contains("blit") || it.name.contains("texture") }.each { println it.name + "(" + it.parameterTypes*.simpleName.join(", ") + ")" }
+            } catch (Exception e) { e.printStackTrace() }
+        }
+    }
+}
