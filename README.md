@@ -1,18 +1,7 @@
-# Music-Player
-
-[
-![Curseforge Downloads](http://cf.way2muchnoise.eu/music-player.svg)
-![Curseforge Versions](http://cf.way2muchnoise.eu/versions/music-player.svg)
-](https://www.curseforge.com/minecraft/mc-mods/music-player)
-[
-![Discord](https://img.shields.io/discord/297104769649213441?label=Discord)
-](https://discordapp.com/invite/QXbWS36)
+# Music-Player-Extended
 
 ### With this mod you can listen to music and manage your playlist without using external programs.
 
-- Download on [curseforge](https://www.curseforge.com/minecraft/mc-mods/music-player).  
-- Find more information on our [website](https://u-team.info/mods/musicplayer).
-- Updates can be found in the [changelog](CHANGELOG.md).
 
 ### How to build this mod
 
